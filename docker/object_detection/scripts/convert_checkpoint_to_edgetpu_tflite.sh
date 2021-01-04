@@ -48,7 +48,7 @@ source "$PWD/constants.sh"
 mkdir -p "${OUTPUT_DIR}"
 
 echo "GENERATING label file..."
-echo "1 football" >> "${OUTPUT_DIR}/labels.txt"
+echo "0 football" >> "${OUTPUT_DIR}/labels.txt"
 
 echo "EXPORTING frozen graph from checkpoint..."
 python object_detection/export_tflite_ssd_graph.py \
