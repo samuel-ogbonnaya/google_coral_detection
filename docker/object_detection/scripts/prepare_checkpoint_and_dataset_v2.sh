@@ -80,7 +80,7 @@ mv "${LEARN_DIR}/test_labels.csv" "${DATASET_DIR}"
 
 
 echo "PREPARING label map..."
-mv "${LEARN_DIR}/label_map.pbtxt" "${DATASET_DIR}"
+mv "${LEARN_DIR}/football_label_map.pbtxt" "${DATASET_DIR}"
 
 cd "${LEARN_DIR}"
 echo "CONVERTING train dataset to TF Record..."
