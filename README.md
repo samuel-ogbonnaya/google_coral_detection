@@ -1,6 +1,6 @@
 # Edge TPU Object Detction Model Building & Training
 
-This is repo is derived from the [google coral repo](https://github.com/google-coral/tutorials)
+This is repo is derived from the [google coral repo](https://github.com/google-coral/tutorials). 
 I've updated some of the scripts in the docker/object_detection/scripts folder to enable training with my own data.
 
 To use this repo to train and build a model for the Edge TPU with your own data, follow the instructions here:
