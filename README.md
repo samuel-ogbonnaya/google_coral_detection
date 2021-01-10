@@ -13,7 +13,7 @@ However, the suggested changes in these sections:
 
 + In Step 3, change:
    > "git clone https://github.com/google-coral/tutorials.git" 
-   > to
+   to
    > "git clone https://github.com/samuel-ogbonnaya/google_coral_detection.git"
 
 +  Before executing Step 4, update the follwoing lines in constants.sh: 
@@ -44,11 +44,11 @@ Before running the bash script from within the docker container, complete the fo
 - Run the xml_to_csv.py scriptto generat csv files for both the train and test images
 - Create a label map using these [instructions] (https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#create-label-map)
 - Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host   filesystem.
-+ Run my updated bas-script:
++ Run my updated bash script:
 ```
 > ./prepare_checkpoint_and_dataset_v2.sh --network_type mobilenet_v1_ssd --train_whole_model false
 ```
 
 + NOTE: may also have to change file ownerships using chmod +x for some of the bash scripts
 
-### Complete all other steps as per the coral tutorial
+###Complete all other steps as per the coral tutorial
