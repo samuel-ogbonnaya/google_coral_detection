@@ -8,7 +8,10 @@ I've updated some of the scripts in the docker/object_detection/scripts folder t
 To use this repo to train and build a model for the Edge TPU with your own data, follow the instructions here:
 https://coral.ai/docs/edgetpu/retrain-detection/
 
+
 However, the suggested changes in these sections:
+NOTE: My updates have only been made for the mobilenet_v2_ssd network type
+
 ### Setting up Docker container
 
 + In Step 3, change:
@@ -46,7 +49,7 @@ Before running the bash script from within the docker container, complete the fo
 - Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host   filesystem.
 + Run my updated bash script:
 ```
-> ./prepare_checkpoint_and_dataset_v2.sh --network_type mobilenet_v1_ssd --train_whole_model false
+> ./prepare_checkpoint_and_dataset_v2.sh --network_type mobilenet_v2_ssd --train_whole_model false
 ```
 
 + NOTE: may also have to change file ownerships using chmod +x for some of the bash scripts
