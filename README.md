@@ -51,4 +51,5 @@ Before running the bash script from within the docker container, complete the fo
 
 + NOTE: may also have to change file ownerships using chmod +x for some of the bash scripts
 
-###Complete all other steps as per the coral tutorial
+### Next Steps
++ Complete all other steps as per the coral tutorial
