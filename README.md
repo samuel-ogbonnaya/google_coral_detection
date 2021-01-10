@@ -9,8 +9,7 @@ To use this repo to train and build a model for the Edge TPU with your own data,
 https://coral.ai/docs/edgetpu/retrain-detection/
 
 
-However, the suggested changes in these sections:
-NOTE: My updates have only been made for the mobilenet_v2_ssd network type
+However, the follwoing suggested changes shold be made in these sections:
 
 ### Setting up Docker container
 
@@ -53,6 +52,7 @@ Before running the bash script from within the docker container, complete the fo
 ```
 
 + NOTE: may also have to change file ownerships using chmod +x for some of the bash scripts
++ NOTE: my updates have only been made for the mobilenet_v2_ssd network type
 
 ### Next Steps
 + Complete all other steps as per the coral tutorial
