@@ -35,8 +35,7 @@ However, the suggested changes in these sections:
    "...--mount type=bind,src=${DETECT_DIR},dst=/tensorflow/models/research/your-dir detect-tutorial-tf1"
    ```
 ### Download and configure the training data
-Before running the bash script, complete the follwoing for pre-processing your image data, or utilise you own pre-processing method.
-> ./prepare_checkpoint_and_dataset.sh --network_type mobilenet_v1_ssd --train_whole_model false
+Before running the bash script from within the docker container, complete the following for pre-processing your image data, or utilise you own pre-processing methods:
 - Collate your collected images into a folder
 - Take a clean subset of images (e.g not blurred etc)
 - From the preprocessing folder, run the image_naming.py script, then the resizer.py script
@@ -44,4 +43,12 @@ Before running the bash script, complete the follwoing for pre-processing your i
 - Run the partition_dataset script on the processed (annotated) images 
 - Run the xml_to_csv.py scriptto generat csv files for both the train and test images
 - Create a label map using these [instructions] (https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#create-label-map)
-- Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host   filesystem.  
+- Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host   filesystem.
++ Run my updated bas-script:
+```
+> ./prepare_checkpoint_and_dataset_v2.sh --network_type mobilenet_v1_ssd --train_whole_model false
+```
+
++ NOTE: may also have to change file ownerships using chmod +x for some of the bash scripts
+
+### Complete all other steps as per the coral tutorial
