@@ -10,18 +10,29 @@ https://coral.ai/docs/edgetpu/retrain-detection/
 
 However, the following updates should be made:
 
-+ In Step 3: change "git clone https://github.com/google-coral/tutorials.git" to "git clone https://github.com/samuel-ogbonnaya/google_coral_detection.git"
++ In Step 3:
+   change
+   > "git clone https://github.com/google-coral/tutorials.git" 
+   > to
+   > "git clone https://github.com/samuel-ogbonnaya/google_coral_detection.git"
 
-+  Before executing Step 4: 
-   Update the lines in constants.sh 
-   >LEARN_DIR="${OBJ_DET_DIR}/sportseye"
-   >DATASET_DIR="${LEARN_DIR}/sportseye_data" 
-   to
++  Before executing Step 4, update the follwoing lines in constants.sh: 
+   > LEARN_DIR="${OBJ_DET_DIR}/sportseye"
+   > DATASET_DIR="${LEARN_DIR}/sportseye_data" 
+   > to
    > LEARN_DIR="${OBJ_DET_DIR}/your-dir"
    > DATASET_DIR="${LEARN_DIR}/your-dir-data"
-  
-+  In Step 6:
-    Update
-      "...--mount type=bind,src=${DETECT_DIR},dst=/tensorflow/models/research/learn_pet detect-tutorial-tf1"
+   
+   ```
+   LEARN_DIR="${OBJ_DET_DIR}/sportseye"
+   DATASET_DIR="${LEARN_DIR}/sportseye_data" 
+   ```
+   to
+   ```
+   LEARN_DIR="${OBJ_DET_DIR}/your-dir"
+   DATASET_DIR="${LEARN_DIR}/your-dir-data"
+   ```
++  In Step 6, update the following:
+   > "...--mount type=bind,src=${DETECT_DIR},dst=/tensorflow/models/research/learn_pet detect-tutorial-tf1"
     to 
       "...--mount type=bind,src=${DETECT_DIR},dst=/tensorflow/models/research/your-dir detect-tutorial-tf1"
