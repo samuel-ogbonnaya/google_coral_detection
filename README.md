@@ -9,7 +9,7 @@ To use this repo to train and build a model for the Edge TPU with your own data,
 https://coral.ai/docs/edgetpu/retrain-detection/
 
 
-However, the follwoing suggested changes shold be made in these sections:
+However, the following suggested changes should be made in these sections:
 
 ### Setting up Docker container
 
@@ -48,11 +48,11 @@ Before running the bash script from within the docker container, complete the fo
 - Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host   filesystem.
 + Run my updated bash script:
 ```
-> ./prepare_checkpoint_and_dataset_v2.sh --network_type mobilenet_v2_ssd --train_whole_model false
+> ./prepare_checkpoint_and_dataset_2.sh --network_type mobilenet_v2_ssd --train_whole_model false
 ```
 
 + NOTE: may also have to change file ownerships using chmod +x for some of the bash scripts
 + NOTE: my updates have only been made for the mobilenet_v2_ssd network type
 
 ### Next Steps
-+ Complete all other steps as per the coral tutorial
++ Complete all other steps as per the google coral tutorial
