@@ -43,9 +43,10 @@ Before running the bash script from within the docker container, complete the fo
 - From the preprocessing folder, run the image_naming.py script, then the resizer.py script
 - Use Labellimg, instructions [here](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#annotate-the-dataset)
 - Run the partition_dataset script on the processed (annotated) images 
-- Run the xml_to_csv.py scriptto generat csv files for both the train and test images
+- Run the xml_to_csv.py scriptto generate csv files for both the train and test images
 - Create a label map using these [instructions] (https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#create-label-map)
-- Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host   filesystem.
+- Copy the train and test image folders, label map, geenrate_tfrecord.py and the train and test csv files into the mounted docker directory on your host filesystem.
+
 + Run my updated bash script:
 ```
 > ./prepare_checkpoint_and_dataset_2.sh --network_type mobilenet_v2_ssd --train_whole_model false
